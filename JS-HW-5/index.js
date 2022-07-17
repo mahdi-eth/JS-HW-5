@@ -2,13 +2,11 @@ const userName = document.getElementById("userName");
 const btnFirst = document.getElementById("btnFirst");
 const btnSecond = document.getElementById("btnSecond");
 const btnThird = document.getElementById("btnThird");
-const userLastName = document.getElementById("userLastName");
-
 
 
 const btnFirstaction = () => {
     const btnFirstData = {
-        inputFirst: btnFirst.value,
+        inputFirst: btnFirst.innerHTML,
     };
    userName.value += btnFirstData.inputFirst;
 }
@@ -17,7 +15,7 @@ btnFirst.addEventListener("click" , btnFirstaction);
 
 const btnSecondaction = () => {
     const btnSecondData = {
-        inputSecond: btnSecond.value,
+        inputSecond: btnSecond.innerHTML,
     };
    userName.value += btnSecondData.inputSecond;
 }
@@ -26,10 +24,9 @@ btnSecond.addEventListener("click" , btnSecondaction);
 
 const btnThirdaction = () => {
     const btnThirdData = {
-        input: btnThird.value,
+        input: btnThird.innerHTML,
     };
 
-   console.log(btnThirdData.input);
    userName.value += btnThirdData.input;
 }
 
